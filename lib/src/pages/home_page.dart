@@ -7,13 +7,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Container(
+        child: 
+        Container(
         alignment: AlignmentDirectional.center,
         decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage('lib/src/img/Grupo_910.png'),
-                opacity: 0.2)),
+                opacity: 0.2
+            )
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -30,32 +33,26 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  child: const Text(
+                Text(
                     'Meal',
                     style: TextStyle(
-                        color: Colors.orange,
+                        color: Theme.of(context).primaryColor,
                         fontSize: 35.0,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold
+                    ),
                   ),
-                ),
-                const Text(
+                const SizedBox(width: 5.0,),
+                Text(
                   'Monkey',
                   style: TextStyle(
-                      color: Colors.grey,
+                      color: Theme.of(context).colorScheme.secondary,
                       fontSize: 35.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            const Text(
-              'FOOD DELIVERY',
-              style: TextStyle(
-                color: Color.fromARGB(255, 165, 163, 163),
-                fontSize: 15.0,
-                wordSpacing: 2.0,
-              ),
-            ),
+            const SizedBox(width: 5.0,),
+            const Text('FOOD DELIVERY'),
           ],
         ),
       ),
